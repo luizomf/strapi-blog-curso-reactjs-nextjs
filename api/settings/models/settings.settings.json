@@ -1,0 +1,40 @@
+{
+  "kind": "singleType",
+  "collectionName": "settings",
+  "info": {
+    "name": "settings"
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": true
+  },
+  "attributes": {
+    "blogName": {
+      "type": "string",
+      "required": true
+    },
+    "blogDescription": {
+      "type": "string",
+      "required": true
+    },
+    "logo": {
+      "model": "file",
+      "via": "related",
+      "allowedTypes": [
+        "images"
+      ],
+      "plugin": "upload",
+      "required": false
+    },
+    "menuLink": {
+      "type": "component",
+      "repeatable": true,
+      "component": "menu.menu-link"
+    },
+    "text": {
+      "type": "richtext",
+      "required": true
+    }
+  }
+}
