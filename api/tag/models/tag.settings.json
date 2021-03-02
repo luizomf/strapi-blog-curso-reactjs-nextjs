@@ -18,6 +18,10 @@
       "type": "uid",
       "targetField": "displayName",
       "required": true
+    },
+    "posts": {
+      "via": "tags",
+      "collection": "post"
     }
   }
 }
